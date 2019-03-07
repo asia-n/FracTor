@@ -24,10 +24,13 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="fracture.h">
+    <ClInclude Include="CalcFractions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CalcFractions.h">
+    <ClInclude Include="fraction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="handleFractions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,5 +44,11 @@
     <ClCompile Include="CalcFractions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="handleFractions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

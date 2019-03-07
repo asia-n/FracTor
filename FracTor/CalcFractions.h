@@ -1,15 +1,15 @@
 #pragma once
-#include "fracture.h"
+#include "fraction.h"
 
-class CalcFractions
+class calcFractions
 {
 public:
-	Tfracture addition(Tfracture fractureA, Tfracture fractureB);
-	Tfracture substraction(Tfracture fractureA, Tfracture fractureB);
-	Tfracture multiplication(Tfracture fractureA, Tfracture fractureB);
-	Tfracture division(Tfracture fractureA, Tfracture fractureB);
+	Tfraction addition(Tfraction fractureA, Tfraction fractureB);
+	Tfraction substraction(Tfraction fractureA, Tfraction fractureB);
+	Tfraction multiplication(Tfraction fractureA, Tfraction fractureB);
+	Tfraction division(Tfraction fractureA, Tfraction fractureB);
 
-	Tfracture power(Tfracture fracture,int exp);
-	Tfracture shorten(Tfracture fracture);
+	Tfraction power(Tfraction fracture,int exp);
+	Tfraction shorten(Tfraction fracture);
 };
 

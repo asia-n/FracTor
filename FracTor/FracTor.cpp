@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include <string>
 #include <iostream>
-#include "fracture.h"
+#include "fraction.h"
 
 using namespace std;
 

@@ -1,10 +1,10 @@
 #include "stdafx.h"
-#include "fracture.h"
+#include "fraction.h"
 #include "CalcFractions.h"
 #include "math.h"
 
-Tfracture CalcFractions::addition(Tfracture fractureA, Tfracture fractureB) {
-	Tfracture resultFraction;
+Tfraction calcFractions::addition(Tfraction fractureA, Tfraction fractureB) {
+	Tfraction resultFraction;
 
 
 	if (fractureA.n == fractureA.n) {
@@ -20,8 +20,8 @@ Tfracture CalcFractions::addition(Tfracture fractureA, Tfracture fractureB) {
 	return shorten(resultFraction);
 }
 
-Tfracture CalcFractions::substraction(Tfracture fractureA, Tfracture fractureB) {
-	Tfracture resultFraction;
+Tfraction calcFractions::substraction(Tfraction fractureA, Tfraction fractureB) {
+	Tfraction resultFraction;
 
 
 	if (fractureA.n == fractureA.n) {
@@ -37,8 +37,8 @@ Tfracture CalcFractions::substraction(Tfracture fractureA, Tfracture fractureB) 
 	return shorten(resultFraction);
 }
 
-Tfracture CalcFractions::multiplication(Tfracture fractureA, Tfracture fractureB) {
-	Tfracture resultFraction;
+Tfraction calcFractions::multiplication(Tfraction fractureA, Tfraction fractureB) {
+	Tfraction resultFraction;
 
 
 	resultFraction.n = fractureA.n * fractureB.n;
@@ -47,8 +47,8 @@ Tfracture CalcFractions::multiplication(Tfracture fractureA, Tfracture fractureB
 	return shorten(resultFraction);
 }
 
-Tfracture CalcFractions::division(Tfracture fractureA, Tfracture fractureB) {
-	Tfracture resultFraction;
+Tfraction calcFractions::division(Tfraction fractureA, Tfraction fractureB) {
+	Tfraction resultFraction;
 
 
 	resultFraction.n = fractureA.n * fractureB.z;
@@ -57,14 +57,14 @@ Tfracture CalcFractions::division(Tfracture fractureA, Tfracture fractureB) {
 	return shorten(resultFraction);
 }
 
-Tfracture CalcFractions::power( Tfracture fracture,int exp) {
+Tfraction calcFractions::power(Tfraction fracture, int exp) {
 	fracture.z = (int)pow(fracture.z, exp);
 	fracture.n = (int)pow(fracture.n, exp);
 
 	return shorten(fracture);
 }
 
-Tfracture CalcFractions::shorten(Tfracture fracture) {
+Tfraction calcFractions::shorten(Tfraction fracture) {
 	for (int i = 2; i <= fracture.n; i++) {
 		if (fracture.n%i == 0 && fracture.z%i == 0) {
 			fracture.z /= i;
