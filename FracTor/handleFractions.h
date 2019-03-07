@@ -1,8 +1,12 @@
 #pragma once
+#include <string>
+#include "fraction.h"
+using namespace std;
+
 class handleFractions
 {
 public:
-	handleFractions();
-	~handleFractions();
+	void handler(string input);
+	Tfraction stringToFraction(string fraction);
 };
 
