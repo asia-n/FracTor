@@ -27,10 +27,7 @@
     <ClInclude Include="fracture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BasicFractions.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AdvFractions.h">
+    <ClInclude Include="CalcFractions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -41,10 +38,7 @@
     <ClCompile Include="FracTor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BasicFractions.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AdvFractions.cpp">
+    <ClCompile Include="CalcFractions.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
