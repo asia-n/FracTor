@@ -7,7 +7,7 @@ Tfraction calcFractions::addition(Tfraction fractureA, Tfraction fractureB) {
 	Tfraction resultFraction;
 
 
-	if (fractureA.n == fractureA.n) {
+	if (fractureA.n == fractureB.n) {
 		resultFraction.n = fractureA.n;
 		resultFraction.z = fractureA.z + fractureB.z;
 
@@ -24,7 +24,7 @@ Tfraction calcFractions::substraction(Tfraction fractureA, Tfraction fractureB) 
 	Tfraction resultFraction;
 
 
-	if (fractureA.n == fractureA.n) {
+	if (fractureA.n == fractureB.n) {
 		resultFraction.n = fractureA.n;
 		resultFraction.z = fractureA.z - fractureB.z;
 

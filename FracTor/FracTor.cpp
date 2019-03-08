@@ -5,11 +5,13 @@
 #include <string>
 #include <iostream>
 #include "fraction.h"
+#include "handleFractions.h"
 
 using namespace std;
 
 int main()
 {
+	handleFractions handler;
 	string input;
 
 	cout << "FracTor\n-------" << endl;
@@ -18,7 +20,11 @@ int main()
 		"Deine Rechnung:\t";
 	getline(cin, input);
 
+	Tfraction res= handler.handler(input);
 
+	cout << "Das Ergebnis:\t" << res.z << "/" << res.n;
+	getchar();
+	getchar();
 	return 0;
 }
 
