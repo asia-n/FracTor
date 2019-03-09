@@ -6,7 +6,7 @@ using namespace std;
 class handleFractions
 {
 public:
-	Tfraction handler(string input);
-	Tfraction stringToFraction(string fraction);
+	Tfraction handler (string input);
+	Tfraction stringToFraction (string fraction);
 };
 

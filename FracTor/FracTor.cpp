@@ -9,7 +9,7 @@
 
 using namespace std;
 
-int main()
+int main ()
 {
 	handleFractions handler;
 	string input;
@@ -18,13 +18,13 @@ int main()
 	cout << "Um etwas zu berechnen musst du (zwei) Brueche eingeben sowie einen Operator" << endl <<
 		"Beispiel Eingaben: 1/2 + 3/4 | 1/2 - 3/4 | 1/2 * 3/4 | 1/2 : 3/4 | 1/2 ^ 3" << endl <<
 		"Deine Rechnung:\t";
-	getline(cin, input);
+	getline (cin, input);
 
-	Tfraction res= handler.handler(input);
+	Tfraction res = handler.handler (input);
 
 	cout << "Das Ergebnis:\t" << res.z << "/" << res.n;
-	getchar();
-	getchar();
+	getchar ();
+	getchar ();
 	return 0;
 }
 
