@@ -5,8 +5,3 @@ struct Tfraction
 	int n;	// n = Nenner
 };
 
-struct T2fractions
-{
-	Tfraction A;
-	Tfraction B;
-};

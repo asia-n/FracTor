@@ -11,5 +11,6 @@ public:
 
 	Tfraction power (Tfraction fracture, int exp);
 	Tfraction shorten (Tfraction fracture);
+	Tfraction ea (Tfraction fractionA);
 };
 

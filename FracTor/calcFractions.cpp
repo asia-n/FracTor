@@ -20,7 +20,7 @@ Tfraction calcFractions::addition (Tfraction fractureA, Tfraction fractureB)
 		resultFraction.z = (fractureA.z*fractureB.n) + (fractureA.n * fractureB.z);
 	}
 
-	return shorten (resultFraction);
+	return ea (resultFraction);
 }
 
 Tfraction calcFractions::substraction (Tfraction fractureA, Tfraction fractureB)
@@ -40,7 +40,7 @@ Tfraction calcFractions::substraction (Tfraction fractureA, Tfraction fractureB)
 		resultFraction.z = (fractureA.z*fractureB.n) - (fractureA.n * fractureB.z);
 
 	}
-	return shorten (resultFraction);
+	return ea (resultFraction);
 }
 
 Tfraction calcFractions::multiplication (Tfraction fractureA, Tfraction fractureB)
@@ -51,7 +51,7 @@ Tfraction calcFractions::multiplication (Tfraction fractureA, Tfraction fracture
 	resultFraction.n = fractureA.n * fractureB.n;
 	resultFraction.z = fractureA.z * fractureB.z;
 
-	return shorten (resultFraction);
+	return ea (resultFraction);
 }
 
 Tfraction calcFractions::division (Tfraction fractureA, Tfraction fractureB)
@@ -62,7 +62,7 @@ Tfraction calcFractions::division (Tfraction fractureA, Tfraction fractureB)
 	resultFraction.n = fractureA.n * fractureB.z;
 	resultFraction.z = fractureA.z * fractureB.n;
 
-	return shorten (resultFraction);
+	return ea (resultFraction);
 }
 
 Tfraction calcFractions::power (Tfraction fracture, int exp)
@@ -70,7 +70,7 @@ Tfraction calcFractions::power (Tfraction fracture, int exp)
 	fracture.z = (int) pow (fracture.z, exp);
 	fracture.n = (int) pow (fracture.n, exp);
 
-	return shorten (fracture);
+	return ea (fracture);
 }
 
 Tfraction calcFractions::shorten (Tfraction fracture)
@@ -85,4 +85,20 @@ Tfraction calcFractions::shorten (Tfraction fracture)
 		}
 	}
 	return fracture;
+}
+
+Tfraction calcFractions::ea (Tfraction fraction)
+{
+	int n = fraction.n;
+	int z = fraction.z;
+	int temp;
+
+	while (n != 0)
+	{
+		temp = z % n;
+		z = n;
+		n = temp;
+	}
+
+	return{fraction.z/z,fraction.n/z};
 }
